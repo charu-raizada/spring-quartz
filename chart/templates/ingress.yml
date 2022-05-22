@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ include "quartzapp.fullname" . }}
+  labels:
+    {{- include "quartzapp.labels" . | nindent 4}}
+  annotations:
+    dev.okteto.com/generate-host: "true"
+    kubernetes.io/ingress.allow-http: "false"
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: myapp-service
+              servicePort: 8080

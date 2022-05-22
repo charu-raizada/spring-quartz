@@ -1,0 +1,9 @@
+apiVersion: v2
+name: quartzapp
+description: A Helm chart Quartz and SpringBoot application.
+
+type: application
+
+version: 0.1.0
+
+appVersion: "1.3.0"

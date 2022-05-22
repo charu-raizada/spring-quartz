@@ -1,0 +1,8 @@
+myapp:
+  replicaCount: 3
+  image: rrishi633/quartzapp
+  tag: "latest"
+
+postgres:
+  postgres_user: "postgres"
+  postgres_password: "password"
